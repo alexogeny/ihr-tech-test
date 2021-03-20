@@ -25,3 +25,7 @@ Repository for the tech test that IHR has given me as part of its recruitment pr
 
 ## remaining time
 - as of this commit, approximately 1 hour
+
+|  Date  |  Time  |
+|--------|--------|
+|21-03-20|2 hours |
