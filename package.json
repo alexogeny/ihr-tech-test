@@ -1,0 +1,22 @@
+{
+  "name": "ihr-tech-test",
+  "version": "1.0.0",
+  "description": "ihr technical test as part of application process",
+  "main": "index.js",
+  "repository": "https://github.com/alexogeny/ihr-tech-test",
+  "author": "alexogeny <alexogeny@pm.me>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev:frontend": "yarn workspace frontend dev",
+    "dev:backend": "yarn workspace backend dev",
+    "dev": "concurrently --kill-others yarn:dev:*"
+  },
+  "dependencies": {
+    "concurrently": "4.1.0"
+  }
+}
