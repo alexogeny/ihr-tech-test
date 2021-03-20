@@ -11,10 +11,10 @@
  * Admin will be able to see history of a name's users
  * Admin will be able to generate a list of all upcoming overdue namechanges
  */
-export default `
+module.exports = `
     type User {
         id: ID!
-        name: String!
+        name: Name!
         pwd: String!
         isAdmin: Boolean!
     }
@@ -24,9 +24,9 @@ export default `
     }
     type History {
         id: ID!
-        userId: Integer!
-        nameId: Integer!
-        dateAssigned: Date!
+        userId: Int!
+        nameId: Int!
+        dateAssigned: Int!
     }
     type Query {
         names: [Name!]!
@@ -34,12 +34,12 @@ export default `
         history: [History!]!
         name(id: ID!): Name
         user(id: ID!): User
-        historyUser(userId: Integer!): History
-        historyName(nameId: Integer!): History
+        historyUser(userId: Int!): History
+        historyName(nameId: Int!): History
     }
     type Mutation {
         createName(value: String!): Name!
-        createAssign(nameId: Integer!, userId! Integer): [Int!]!
+        createAssign(nameId: Int!, userId: Int!): [Int!]!
         updateUser(id: ID!, pwd: String!, isAdmin: Boolean!): [Int!]!
     }
 `;

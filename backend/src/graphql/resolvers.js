@@ -6,14 +6,9 @@
  * Again, since I just want to see if I can get this working in <4 hours, I'll do it this way.
  * Plus, it's very readable and elegant.
  */
-export default {
+module.exports = {
     User: {
-        name: (parent, args, context, info) => parent.getName(),
-        history: (parent, args, context, info) => parent.getHistory(),
-    },
-    Name: {
-        user: (parent, args, context, info) => parent.getUser(),
-        history: (parent, args, context, info) => parent.getHistory(),
+        name: (parent, args, context, info) => parent.getName()
     },
     Query: {
         names: (parent, args, { db }, info) => db.name.findAll(),
