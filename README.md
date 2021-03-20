@@ -18,3 +18,7 @@ Repository for the tech test that IHR has given me as part of its recruitment pr
     - allow citezens to view and change their name (and see name history)
 - back end
     - powered by express with apollo+graphql (backed by postgresql)
+
+## setup
+- create a pg db on the localhost titled 'ihr-tech-test' (no quotes)
+- ensure username and password are set to 'postgres' (no quotes)

@@ -14,7 +14,7 @@ export default (sequelize, DataTypes) => {
             allowNull: true
         },
         dateAssigned: {
-            type: DataTypes.DATE,
+            type: DataTypes.INTEGER,
             allowNull: true
         }
     },
