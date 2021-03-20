@@ -8,6 +8,14 @@ export default (sequelize, DataTypes) => {
         value: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        dateAssigned: {
+            type: DataTypes.DATE,
+            allowNull: true
+        },
+        userAssigned: {
+            type: DataTypes.INTEGER,
+            allowNull: true
         }
     },
         {
@@ -17,6 +25,7 @@ export default (sequelize, DataTypes) => {
 
     Name.associate = (models) => {
         Name.belongsTo(models.user);
+        Name.hasMany(models.history);
     };
 
     return Name;

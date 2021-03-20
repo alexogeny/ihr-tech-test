@@ -5,7 +5,6 @@ export default (sequelize, DataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        name: DataTypes.STRING,
         pwd: DataTypes.STRING,
         isAdmin: DataTypes.BOOLEAN
     },
@@ -16,6 +15,7 @@ export default (sequelize, DataTypes) => {
 
     User.associate = (models) => {
         User.hasOne(models.name);
+        User.hasMany(models.history);
     };
 
     return User;
