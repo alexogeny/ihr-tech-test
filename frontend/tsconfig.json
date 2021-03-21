@@ -1,6 +1,16 @@
 {
     "compilerOptions": {
         "baseUrl": "./src",
-        "jsx": "react"
+        "jsx": "react",
+        "lib": [
+            "es6",
+            "dom"
+        ],
+        "target": "es6",
+        "esModuleInterop": true,
+        "types": [
+            "react",
+            "react-dom"
+        ]
     }
 }

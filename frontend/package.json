@@ -7,6 +7,8 @@
     "dev": "next src"
   },
   "dependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/plugin-transform-react-jsx": "^7.12.17",
     "@types/next": "^9.0.0",
     "@types/react": "^17.0.3",
     "apollo-boost": "^0.4.9",
