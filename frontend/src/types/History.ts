@@ -5,8 +5,9 @@
  */
 
 export interface IHistory {
-    userId: Int16Array;
-    nameId: Int16Array;
+    userId: String;
+    nameId: String;
+    dateAssigned: String;
 }
 
 export type IHistoryMutation = {

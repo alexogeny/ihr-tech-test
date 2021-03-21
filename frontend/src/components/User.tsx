@@ -6,11 +6,13 @@ type Props = {
 };
 
 const User: React.FC<Props> = ({ user }) => {
-    const { title, description } = user;
+    const { id, pwd, isAdmin } = user;
 
     return (
-        <div className= "Card" > </div>
-  );
+        <div className="Card" >
+            <span>ID: {id}</span>
+        </div>
+    );
 };
 
 export default User;

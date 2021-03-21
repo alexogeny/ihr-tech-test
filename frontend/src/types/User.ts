@@ -5,7 +5,9 @@
  */
 
 export interface IUser {
-    value: string;
+    id: string;
+    pwd: string;
+    isAdmin: boolean;
 }
 
 export interface IUsers {

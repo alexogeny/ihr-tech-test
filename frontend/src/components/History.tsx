@@ -6,11 +6,11 @@ type Props = {
 };
 
 const History: React.FC<Props> = ({ history }) => {
-    const { title, description } = history;
+    const { userId, nameId, dateAssigned } = history;
 
     return (
-        <div classHistory= "Card" > </div>
-  );
+        <div className="Card" > </div>
+    );
 };
 
 export default History;
