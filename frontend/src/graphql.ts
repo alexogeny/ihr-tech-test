@@ -6,12 +6,18 @@
 
 import gql from 'graphql-tag';
 
-export const GET_HISTORY = gql`
-    {}
+export const GET_USERS = gql`
+    {
+        users {
+            id
+            pwd
+            isAdmin
+        }
+    }
 `;
 
 export const CREATE_NAME = gql`
-    mutation createName() {
-        
+    mutation createName($value: String!) {
+        addName
     }
 `;
