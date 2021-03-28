@@ -3,31 +3,27 @@
  */
 import React from 'react';
 import { GET_USERS } from '../graphql';
-import User from "../components/User";
+import Users from "../components/User";
 import { IUser } from "../types/User";
-import { useUsersQuery } from '../makeRequest';
 
-import ApolloClient from 'apollo-boost';
-import { ApolloProvider } from 'react-apollo';
+
+// import ApolloClient from 'apollo-boost';
+import { ApolloProvider, ApolloClient, InMemoryCache, ApolloConsumer } from '@apollo/client';
 
 const client = new ApolloClient({
+    cache: new InMemoryCache(),
     uri: "http://localhost:4000/graphql"
 });
 
 
 const Index = () => {
-    const { loading, error, data } = useUsersQuery(GET_USERS);
-    if (loading) return <h1>Loading...</h1>;
-    if (error) return <h1>Something went wrong.</h1>;
     return (
-        <ApolloProvider client={client}><div>
+        <ApolloProvider client={client}>
+        <div>
             <h1>Name change society</h1>
-            <div>
-                {data.getUsers.map((user: IUser) => (
-                    <User key={user.id} user={user} />
-                ))}
-            </div>
-        </div></ApolloProvider>
+            <Users />
+        </div>
+        </ApolloProvider>
     )
 }
 export default Index;

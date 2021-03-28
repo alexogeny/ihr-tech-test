@@ -1,7 +1,7 @@
 /**
  * Imports
  */
-import { DocumentNode, useQuery, useMutation } from '@apollo/react-hooks';
+import { DocumentNode, useQuery, useMutation } from '@apollo/client';
 import { IUsers } from './types/User';
 import { IName, INames, INameMutation } from './types/Name';
 import { IHistory, IHistoryMutation } from './types/History';
@@ -12,8 +12,8 @@ import { IHistory, IHistoryMutation } from './types/History';
  * @returns stateful response
  */
 export function useUsersQuery(gqlQuery: DocumentNode) {
-    const { loading, error, data } = useQuery<IUsers>(gqlQuery);
-    return { loading, error, data };
+    const { loading, error, data } = useQuery<IUsers>(gqlQuery)
+    return { loading, error, data }
 }
 
 /**
@@ -22,8 +22,8 @@ export function useUsersQuery(gqlQuery: DocumentNode) {
  * @returns stateful response
  */
 export function useNameQuery(gqlQuery: DocumentNode) {
-    const { loading, error, data } = useQuery<IName>(gqlQuery);
-    return { loading, error, data };
+    const { loading, error, data } = useQuery<IName>(gqlQuery)
+    return { loading, error, data }
 }
 
 /**
@@ -32,8 +32,8 @@ export function useNameQuery(gqlQuery: DocumentNode) {
  * @returns  
  */
 export function useNamesQuery(gqlQuery: DocumentNode) {
-    const { loading, error, data } = useQuery<INames>(gqlQuery);
-    return { loading, error, data };
+    const { loading, error, data } = useQuery<INames>(gqlQuery)
+    return { loading, error, data }
 }
 
 /**
@@ -42,8 +42,8 @@ export function useNamesQuery(gqlQuery: DocumentNode) {
  * @returns  
  */
 export function useNameMutation(gqlQuery: DocumentNode) {
-    const [addName] = useMutation<INameMutation>(gqlQuery);
-    return [addName];
+    const [addName] = useMutation<INameMutation>(gqlQuery)
+    return [addName]
 }
 
 /**
@@ -52,8 +52,8 @@ export function useNameMutation(gqlQuery: DocumentNode) {
  * @returns  
  */
 export function useHistoryQuery(gqlQuery: DocumentNode) {
-    const { loading, error, data } = useQuery<IHistory>(gqlQuery);
-    return { loading, error, data };
+    const { loading, error, data } = useQuery<IHistory>(gqlQuery)
+    return { loading, error, data }
 }
 
 /**
@@ -62,6 +62,6 @@ export function useHistoryQuery(gqlQuery: DocumentNode) {
  * @returns  
  */
 export function useHistoryMutation(gqlQuery: DocumentNode) {
-    const [addHistory] = useMutation<IHistoryMutation>(gqlQuery);
-    return [addHistory];
+    const [addHistory] = useMutation<IHistoryMutation>(gqlQuery)
+    return [addHistory]
 }

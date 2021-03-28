@@ -4,7 +4,7 @@
  * For now, just want to try and get something working, so we'll define individual queries here
  */
 
-import gql from 'graphql-tag';
+import {gql} from '@apollo/client';
 
 export const GET_USERS = gql`
     {
@@ -14,10 +14,10 @@ export const GET_USERS = gql`
             isAdmin
         }
     }
-`;
+`
 
 export const CREATE_NAME = gql`
     mutation createName($value: String!) {
         addName
     }
-`;
+`

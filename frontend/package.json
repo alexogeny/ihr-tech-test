@@ -1,12 +1,13 @@
 {
   "name": "frontend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "license": "MIT",
   "scripts": {
     "dev": "next src"
   },
   "dependencies": {
+    "@apollo/client": "^3.3.13",
     "@babel/cli": "^7.13.10",
     "@babel/plugin-transform-react-jsx": "^7.12.17",
     "@types/next": "^9.0.0",
