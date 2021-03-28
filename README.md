@@ -51,3 +51,10 @@ Table of time spent:
 
 ## if you like what you see
 Then I look forward to sitting down and discussing a potential opportunity over an interview (virus permitting). 😊
+
+## adendum: configuration
+set up the db:
+1. brew install postgresql
+2. brew start postgresql
+2. createuser --pwprompt postgres
+3. createdb ihr-tech-test
